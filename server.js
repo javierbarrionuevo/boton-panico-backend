@@ -1,5 +1,6 @@
 const express = require("express");
 const fetch = require("node-fetch");
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 app.use(express.json());
@@ -42,6 +43,6 @@ app.get("/alert", async (req, res) => {
 });
 
 // 🚀 Iniciar servidor
-app.listen(3000,"0.0.0.0", () => {
-  console.log("Servidor corriendo en puerto 8080");
+app.listen(PORT,"0.0.0.0", () => {
+  console.log("Servidor corriendo");
 });
